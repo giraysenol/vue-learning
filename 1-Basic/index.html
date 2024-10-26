@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="text" id="todoText" v-model="todoText">
+    <button id="addBtn" @click="addTodo">Ekle</button>
+    <ul id="todoList">
+      <li v-for="todo in todoList" :key="todo">{{todo}}</li>
+    </ul>
+
+    <a v-bind:href="link">link</a>
+    <p v-once>{{title1}}</p>
+    <p> {{func1()}}</p>
+    <p v-html="vueHtml"></p>
+    <button v-on:click="func2('Giray')">Show Alert</button>
+    <p>{{counter}}</p>
+    <button v-on:click="counter++">Arttır</button>
+    <button v-on:click="increasecounter(3)">Arttır</button>
+
+    <p v-on:mousemove="updateCoords(7, $event)">Koordinatlar : {{ x }},{{ y }}
+      <span v-on:mousemove.stop>GİZLİ BÖLME</span>
+    </p>
+    {{counter > 10 ? "counter 10 dan büyüktür" : "küçüktürs"}}
+
+    <input type="text" v-model="text">
+    <p>{{text}}</p>
+
+
+
+
+    <button v-on:click="counter2++">Arttır</button>
+    <button v-on:click="counter2--">Azalt</button>
+    <button v-on:click="counter3++">2.Counter'ı Arttır</button>
+    <p>Counter : {{counter2}} | {{counter3}}</p>
+    <p>{{func3()}} | {{output}}</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

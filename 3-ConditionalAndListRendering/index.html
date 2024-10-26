@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app" style="display: none;">
+    <p v-if="isShow">Beni Görebilirsin</p>
+    <p v-else>Beni görebilir misin</p>
+    <button @click="isShow=!isShow">Göster/Gizle</button>
+    <hr>
+    <p v-if="sayi < 10">Sayı 10 dan küçüktür</p>
+    <p v-else-if="sayi > 10">Sayı 10 dan büyüktür</p>
+    <p v-else>Sayı 10'a eşittir</p>
+    <hr>
+    <button @click="showParagh = !showParagh">Göster</button>
+    <p v-show="showParagh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ipsum ipsa soluta at dolorem molestiae, sunt nulla corporis deleniti non veritatis ad ullam sint tempora perspiciatis nesciunt aut minus cupiditate!</p>
+
+  </div>
+
+  <div id="app2">
+    <ul>
+      <li v-for="(product, index) in products" :key="product">{{index}} {{product}}</li>
+    </ul>
+    <button @click="products.push('Kablo')">Ekle</button>
+
+    <div v-for="(product, index) in products">
+      <h4>{{product}}</h4>
+      <h6>{{index}}</h6>
+    </div>
+
+    <!-- <template  v-for="(product, index) in products">
+      <h4>{{product}}</h4>
+      <h6>{{index}}</h6>
+    </template> -->
+
+
+    <ul>
+      <li v-for="(person, index) in persons">
+        <ul>
+          <span>{{index}}</span>
+          <li v-for="(value, key, index) in person">{{index}} {{key}} : {{value}}</li>
+        </ul>
+      </li>
+    </ul>
+
+    <span v-for="i in 5">{{i}}</span>
+
+
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

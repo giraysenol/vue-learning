@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="upperBar">
+        <div class="w-100" v-for="(healt, person) in healts">
+          <h2>{{person}}</h2>
+          <div class="healtbar">
+            <div :style="{width : healt + '%'}" class="healtgreen">{{healt}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="panelContainer">
+        <div v-if="game_is_on" class="centerPanel">
+          <button @click="attackBTN" class="attackBTN">Saldır</button>
+          <button @click="speacialAttackBTN" class="speacialAttackBTN" :disabled="counter.sattack >= 2">Özel Saldırı</button>
+          <button @click="helpBTN" class="helpBTN" :disabled="counter.help >= 2">İlk Yardım</button>
+          <button @click="surrenderBTN" class="surrenderBTN">Pes Et</button>  
+        </div>
+        <div v-else class="centerPanel">
+          <button @click="game_is_on = true" class="surrenderBTN">Başlat</button>
+        </div>
+      </div>
+      
+      <div v-if="logs.length > 0" class="panelContainer">
+        <div class="downPanel">
+          <div v-for="log in logs" :class="log.turn ? 'urAttack' : 'monsterAttack'" class="attackBar">{{log.text}}</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
