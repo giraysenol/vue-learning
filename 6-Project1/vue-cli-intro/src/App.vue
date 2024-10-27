@@ -8,7 +8,8 @@
     <SecondComp/> -->
     <!-- <ThirdPage/> -->
     <!-- <FourthPage></FourthPage> -->
-    <FivePage></FivePage>
+    <!-- <FivePage></FivePage> -->
+     <FormElements></FormElements>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import SecondComp from './pages/SecondComp.vue';
 import ThirdPage from './pages/ThirdPage.vue';
 import FourthPage from './pages/FourthPage.vue';
 import FivePage from './pages/FivePage.vue';
+import FormElements from './pages/FormElements.vue';
 
 export default {
   data() {
@@ -31,7 +33,8 @@ export default {
     SecondComp,
     ThirdPage,
     FourthPage,
-    FivePage
+    FivePage,
+    FormElements
   }
 }
 </script>
