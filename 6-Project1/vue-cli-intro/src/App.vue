@@ -1,17 +1,33 @@
 <template>
-  <h1>{{ title }}</h1>
+  <div>
+    <!-- <h1>{{ title }}</h1>
+    <lamp-status v-for="i in 2"></lamp-status>
+    <hr>
+    <lampStatus></lampStatus>
+    <hr>
+    <SecondComp/> -->
+    <!-- <ThirdPage/> -->
+  </div>
 </template>
 
 <script>
+import FirstComp from './pages/FirstComp.vue';
+import SecondComp from './pages/SecondComp.vue';
+import ThirdPage from './pages/ThirdPage.vue';
+
 export default {
-  data () {
+  data() {
     return {
-      title:"Merhaba İlk Proje"
+      title: "Merhaba İlk Proje"
     }
+  },
+  components: {
+    //"lamp-status": FirstComp,
+    lampStatus: FirstComp,
+    SecondComp,
+    ThirdPage
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
