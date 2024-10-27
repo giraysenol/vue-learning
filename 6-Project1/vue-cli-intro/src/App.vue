@@ -7,6 +7,8 @@
     <hr>
     <SecondComp/> -->
     <!-- <ThirdPage/> -->
+    <FourthPage></FourthPage>
+
   </div>
 </template>
 
@@ -14,6 +16,7 @@
 import FirstComp from './pages/FirstComp.vue';
 import SecondComp from './pages/SecondComp.vue';
 import ThirdPage from './pages/ThirdPage.vue';
+import FourthPage from './pages/FourthPage.vue';
 
 export default {
   data() {
@@ -25,7 +28,8 @@ export default {
     //"lamp-status": FirstComp,
     lampStatus: FirstComp,
     SecondComp,
-    ThirdPage
+    ThirdPage,
+    FourthPage
   }
 }
 </script>
