@@ -8,6 +8,22 @@ export const eventBus = new Vue({
     }
   }
 });
+//global directive
+// Vue.directive("color",{
+//   bind(el,binding,vnode){
+//     if(binding.modifiers["delay"]){
+//      setTimeout(() => {
+//       if(binding.arg == 'background'){
+//         el.style.backgroundColor = binding.value
+//       }else if(binding.arg == 'color'){
+//         el.style.color = binding.value
+//       }else{
+//         el.style.color = 'orange'
+//       }
+//      }, 1000);
+//     }
+//   }
+// })
 
 new Vue({
   el: '#app',
