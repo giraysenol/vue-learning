@@ -10,7 +10,8 @@
     <!-- <FourthPage></FourthPage> -->
     <!-- <FivePage></FivePage> -->
     <!-- <FormElements></FormElements> -->
-    <DirectiveUsing></DirectiveUsing>
+    <!-- <DirectiveUsing></DirectiveUsing> -->
+     <FilterMixins></FilterMixins>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import FourthPage from './pages/FourthPage.vue';
 import FivePage from './pages/FivePage.vue';
 import FormElements from './pages/FormElements.vue';
 import DirectiveUsing from './pages/DirectiveUsing.vue';
+import FilterMixins from './pages/FilterMixins.vue';
 
 export default {
   data() {
@@ -37,7 +39,8 @@ export default {
     FourthPage,
     FivePage,
     FormElements,
-    DirectiveUsing
+    DirectiveUsing,
+    FilterMixins
   }
 }
 </script>

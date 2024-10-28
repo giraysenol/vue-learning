@@ -8,6 +8,7 @@ export const eventBus = new Vue({
     }
   }
 });
+
 //global directive
 // Vue.directive("color",{
 //   bind(el,binding,vnode){
@@ -25,6 +26,17 @@ export const eventBus = new Vue({
 //   }
 // })
 
+// global filters
+Vue.filter("toLowercase",(value)=>{
+  return value.toLowerCase()
+})
+
+//global mixin -> !!Kullanımı tehlikelidir!
+Vue.mixin({
+  created(){
+    console.log("gobal mixin created")
+  }
+})
 new Vue({
   el: '#app',
   render: h => h(App)
