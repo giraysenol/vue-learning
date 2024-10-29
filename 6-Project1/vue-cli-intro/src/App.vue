@@ -12,8 +12,8 @@
     <!-- <FormElements></FormElements> -->
     <!-- <DirectiveUsing></DirectiveUsing> -->
     <!-- <FilterMixins></FilterMixins> -->
-    <Transitions/>
-
+    <!-- <Transitions/> -->
+    <VuexState/>
 
   </div>
 </template>
@@ -28,6 +28,7 @@ import FormElements from './pages/FormElements.vue';
 import DirectiveUsing from './pages/DirectiveUsing.vue';
 import FilterMixins from './pages/FilterMixins.vue';
 import Transitions from './pages/Transitions.vue';
+import VuexState from './pages/VuexState.vue';
 
 export default {
   data() {
@@ -45,7 +46,8 @@ export default {
     FormElements,
     DirectiveUsing,
     FilterMixins,
-    Transitions
+    Transitions,
+    VuexState
   }
 }
 </script>
