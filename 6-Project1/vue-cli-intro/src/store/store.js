@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state:{
-    counter:0
+    counter:0,
+    value:0
   },
   getters:{
     getDoubleCounter(state){
@@ -13,6 +14,9 @@ export const store = new Vuex.Store({
     },
     stringCounter(state){
       return `${state.counter}. kez tıklandı.`
+    },
+    getValue(state){
+      return state.value
     }
   },
   //senkron çalışır.!
@@ -28,6 +32,9 @@ export const store = new Vuex.Store({
     decreaseCounter(state){
       state.counter--
     },
+    setValue(state, payload){
+      state.value = payload
+    }
   },
   //asenkron çalışır
   actions:{
@@ -41,6 +48,9 @@ export const store = new Vuex.Store({
       setTimeout(() => {
         commit("increaseCounter")
       }, payload.time);
+    },
+    setValueData({commit},payload){
+      commit("setValue", payload)
     }
 
   }
