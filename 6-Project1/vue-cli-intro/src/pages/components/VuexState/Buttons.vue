@@ -7,7 +7,7 @@
     <div class="btn btn-warning" @click="increament()">Action increament</div>
     <div class="btn btn-warning" @click="decreament()">Action decremant</div>
     <hr>
-    <div class="btn btn-warning" @click="increamentAsync">Action Aysnc increament</div>
+    <div class="btn btn-warning" @click="increamentAsync({time:500})">Action Aysnc increament</div>
 
   </div>
 </template>
