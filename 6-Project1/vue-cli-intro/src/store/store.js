@@ -15,9 +15,12 @@ export const store = new Vuex.Store({
       return `${state.counter}. kez tıklandı.`
     }
   },
+  //senkron çalışır.!
   mutations:{
     updateCounter(state, value){
-      state.counter += value
+      setTimeout(() => {
+        state.counter += value
+      }, 1500);
     },
     increaseCounter(state){
       state.counter++
@@ -25,6 +28,21 @@ export const store = new Vuex.Store({
     decreaseCounter(state){
       state.counter--
     },
+  },
+  //asenkron çalışır
+  actions:{
+    increament({commit}){
+      commit("increaseCounter")
+    },
+    decreament({commit}){
+      commit("decreaseCounter")
+    },
+    increamentAsync({commit}){
+      setTimeout(() => {
+        commit("increaseCounter")
+      }, 2000);
+    }
+
   }
 
 
