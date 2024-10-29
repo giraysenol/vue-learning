@@ -1,59 +1,33 @@
 import Vue from "vue"
 import Vuex from "vuex"
+import counter from "./modules/counter"
+import * as mutations from "./mutations"
+import * as getters from "./getters"
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state:{
-    counter:0,
     value:0
   },
+
   getters:{
-    getDoubleCounter(state){
-      return state.counter*2
-    },
-    stringCounter(state){
-      return `${state.counter}. kez tıklandı.`
-    },
-    getValue(state){
-      return state.value
-    }
+    ...getters,
   },
+
   //senkron çalışır.!
   mutations:{
-    updateCounter(state, value){
-      setTimeout(() => {
-        state.counter += value
-      }, 1500);
-    },
-    increaseCounter(state){
-      state.counter++
-    },
-    decreaseCounter(state){
-      state.counter--
-    },
-    setValue(state, payload){
-      state.value = payload
-    }
+    ...mutations,
   },
+
   //asenkron çalışır
   actions:{
-    increament({commit}){
-      commit("increaseCounter")
-    },
-    decreament({commit}){
-      commit("decreaseCounter")
-    },
-    increamentAsync({commit}, payload){
-      setTimeout(() => {
-        commit("increaseCounter")
-      }, payload.time);
-    },
     setValueData({commit},payload){
       commit("setValue", payload)
     }
+  },
 
+  modules:{
+    counter
   }
-
-
 })
