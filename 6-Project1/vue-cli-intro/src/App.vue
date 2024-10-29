@@ -11,7 +11,10 @@
     <!-- <FivePage></FivePage> -->
     <!-- <FormElements></FormElements> -->
     <!-- <DirectiveUsing></DirectiveUsing> -->
-     <FilterMixins></FilterMixins>
+    <!-- <FilterMixins></FilterMixins> -->
+    <Transitions/>
+
+
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import FivePage from './pages/FivePage.vue';
 import FormElements from './pages/FormElements.vue';
 import DirectiveUsing from './pages/DirectiveUsing.vue';
 import FilterMixins from './pages/FilterMixins.vue';
+import Transitions from './pages/Transitions.vue';
 
 export default {
   data() {
@@ -40,7 +44,8 @@ export default {
     FivePage,
     FormElements,
     DirectiveUsing,
-    FilterMixins
+    FilterMixins,
+    Transitions
   }
 }
 </script>
